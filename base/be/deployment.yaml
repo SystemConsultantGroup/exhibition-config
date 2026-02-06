@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exhibition-be-deployment
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: exhibition-be
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: exhibition-be
+    spec:
+      containers:
+      - image: scgskku/exhibition-be
+        imagePullPolicy: Always
+        name: exhibition-be
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - secretRef:
+            name: exhibition-be-secret
