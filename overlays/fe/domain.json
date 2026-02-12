@@ -1,0 +1,12 @@
+[
+    {
+        "op" : "replace",
+        "path": "/spec/rules/0/host",
+        "value": "exhibition.scg.skku.ac.kr"
+    },
+    {
+        "op" : "replace",
+        "path": "/spec/tls/0/hosts/0",
+        "value": "exhibition.scg.skku.ac.kr"
+    }
+]
