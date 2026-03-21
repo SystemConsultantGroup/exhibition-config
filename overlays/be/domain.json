@@ -12,6 +12,6 @@
     {
         "op": "replace",
         "path": "/metadata/annotations/nginx.ingress.kubernetes.io~1cors-allow-origin",
-        "value": "https://exhibition.scg.sh"
+        "value": "https://exhibition.scg.sh, http://localhost:3000"
     }
 ]
