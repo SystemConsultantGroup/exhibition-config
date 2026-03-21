@@ -11,8 +11,8 @@ spec:
         - blabla.scg.skku.ac.kr
       secretName: gitops-tls
   rules:
-    - http:
-    # - host: blabla.scg.skku.ac.kr
+    - host: blabla.scg.skku.ac.kr
+      http:
         paths:
           - backend:
               service:
