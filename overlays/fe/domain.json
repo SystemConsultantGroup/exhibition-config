@@ -9,32 +9,60 @@
         "path": "/spec/tls/0/hosts/0",
         "value": "exhibition.scg.sh"
     },
-  {
-    "op": "add",
-    "path": "/spec/rules/-",
-    "value": {
-      "host": "exhibition.scg.skku.ac.kr",
-      "http": {
-        "paths": [
-          {
-            "path": "/",
-            "pathType": "Prefix",
-            "backend": {
-              "service": {
-                "name": "exhibition-fe-service",
-                "port": {
-                  "number": 80
+        {
+        "op": "add",
+        "path": "/spec/rules/-",
+        "value": {
+        "host": "sw-gp.exhibition.scg.sh",
+        "http": {
+            "paths": [
+            {
+                "path": "/",
+                "pathType": "Prefix",
+                "backend": {
+                "service": {
+                    "name": "exhibition-fe-service",
+                    "port": {
+                    "number": 80
+                    }
                 }
-              }
+                }
             }
-          }
-        ]
-      }
+            ]
+        }
+        }
+    },
+    {
+        "op": "add",
+        "path": "/spec/tls/0/hosts/-",
+        "value": "sw-gp.exhibition.scg.sh"
+    },
+    {
+        "op": "add",
+        "path": "/spec/rules/-",
+        "value": {
+        "host": "exhibition.scg.skku.ac.kr",
+        "http": {
+            "paths": [
+            {
+                "path": "/",
+                "pathType": "Prefix",
+                "backend": {
+                "service": {
+                    "name": "exhibition-fe-service",
+                    "port": {
+                    "number": 80
+                    }
+                }
+                }
+            }
+            ]
+        }
+        }
+    },
+    {
+        "op": "add",
+        "path": "/spec/tls/0/hosts/-",
+        "value": "exhibition.scg.skku.ac.kr"
     }
-  },
-  {
-    "op": "add",
-    "path": "/spec/tls/0/hosts/-",
-    "value": "exhibition.scg.skku.ac.kr"
-  }
 ]
