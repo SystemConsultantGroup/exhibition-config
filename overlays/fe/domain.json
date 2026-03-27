@@ -13,7 +13,7 @@
         "op": "add",
         "path": "/spec/rules/-",
         "value": {
-        "host": "sw-gp.exhibition.scg.sh",
+        "host": "swgp.exhibition.scg.sh",
         "http": {
             "paths": [
             {
@@ -35,7 +35,7 @@
     {
         "op": "add",
         "path": "/spec/tls/0/hosts/-",
-        "value": "sw-gp.exhibition.scg.sh"
+        "value": "swgp.exhibition.scg.sh"
     },
     {
         "op": "add",
