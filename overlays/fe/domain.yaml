@@ -10,7 +10,7 @@ spec:
         - swgp.exhibition.scg.sh
         - exhibition.scg.skku.ac.kr
         - scg.exhibition.scg.sh
-        - scg.2tle.io
+        - exhibition2.scg.skku.ac.kr
       secretName: gitops-tls
   rules:
     - host: exhibition.scg.sh
@@ -29,6 +29,6 @@ spec:
       http: *feHttp
     - host: scg.exhibition.scg.sh
       http: *feHttp
-    - host: scg.2tle.io
+    - host: exhibition2.scg.skku.ac.kr
       http: *feHttp
 
