@@ -8,7 +8,7 @@ resources:
 
 
 patches:
-- path: domain.json
+- path: domain.yaml
   target:
     kind: Ingress
     name: exhibition-be-ingress

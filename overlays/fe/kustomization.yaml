@@ -6,7 +6,7 @@ resources:
 - ../../base/fe
 
 patches:
-- path: domain.json
+- path: domain.yaml
   target:
     kind: Ingress
     name: exhibition-fe-ingress

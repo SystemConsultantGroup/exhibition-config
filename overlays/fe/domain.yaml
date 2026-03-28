@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: exhibition-fe-ingress
+spec:
+  $patch: replace
+  tls:
+    - hosts:
+        - exhibition.scg.sh
+        - swgp.exhibition.scg.sh
+        - exhibition.scg.skku.ac.kr
+        - scg.exhibition.scg.sh
+        - scg.2tle.io
+      secretName: gitops-tls
+  rules:
+    - host: exhibition.scg.sh
+      http: &feHttp
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: exhibition-fe-service
+                port:
+                  number: 80
+    - host: swgp.exhibition.scg.sh
+      http: *feHttp
+    - host: exhibition.scg.skku.ac.kr
+      http: *feHttp
+    - host: scg.exhibition.scg.sh
+      http: *feHttp
+    - host: scg.2tle.io
+      http: *feHttp
+

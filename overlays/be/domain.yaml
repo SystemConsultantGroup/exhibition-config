@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: exhibition-be-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/cors-allow-origin: "https://exhibition.scg.sh,https://exhibition.scg.skku.ac.kr,http://localhost:3000"
+spec:
+  $patch: replace
+  tls:
+    - hosts:
+        - api.exhibition.scg.sh
+      secretName: gitops-tls
+  rules:
+    - host: api.exhibition.scg.sh
+      http:
+        paths:
+          - path: /v1/(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: exhibition-be-service
+                port:
+                  number: 80
