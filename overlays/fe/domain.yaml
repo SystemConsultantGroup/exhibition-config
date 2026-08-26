@@ -37,4 +37,6 @@ spec:
       http: *feHttp
     - host: aiswm.exhb.scg.skku.ac.kr
       http: *feHttp
+    - host: eeegrd.exhibition.scg.sh
+      http: *feHttp
 
