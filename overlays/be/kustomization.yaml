@@ -14,4 +14,4 @@ patches:
     name: exhibition-be-ingress
 images:
 - name: scgskku/exhibition-be
-  newTag: ae29d7e16b1bcfdec0a9470707ac2f2439682321
+  newTag: ae4966701dc79ad662951ef9ad5d700abe2e324e
