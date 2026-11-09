@@ -14,6 +14,7 @@ spec:
         - swgp.exhb.scg.skku.ac.kr
         - aiswm.exhb.scg.skku.ac.kr
         - eeegrd.exhibition.scg.sh
+        - eeegrd.skku.edu
       secretName: gitops-tls
   rules:
     - host: exhibition.scg.sh
@@ -39,5 +40,7 @@ spec:
     - host: aiswm.exhb.scg.skku.ac.kr
       http: *feHttp
     - host: eeegrd.exhibition.scg.sh
+      http: *feHttp
+    - host: eeegrd.skku.edu
       http: *feHttp
 
